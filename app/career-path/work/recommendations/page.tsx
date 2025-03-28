@@ -79,7 +79,7 @@ export default function WorkRecommendationsPage() {
     };
 
     fetchSkills();
-  }, []);
+  }, [level]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -188,7 +188,7 @@ export default function WorkRecommendationsPage() {
                 ) : (
                   <div className="grid md:grid-cols-2 gap-6">
                     {skills.map((skill, index) => (
-                      <Card key={index}>
+                      <Card key={index} className="bg-background">
                         <CardHeader>
                           <CardTitle>{skill.title}</CardTitle>
                           <CardDescription>Duration: {skill.duration}</CardDescription>

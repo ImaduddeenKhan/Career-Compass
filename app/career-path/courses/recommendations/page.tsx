@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
   ChevronRight,
   Filter,
+  Loader2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -45,9 +46,11 @@ export default function CoursesRecommendationsPage() {
 
   const [filter, setFilter] = useState("all");
   const [courses, setcourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCourses = async () => {
+      setLoading(true)
       try {
         const res = await fetch("/api/courses");
         const data = await res.json();
@@ -56,87 +59,14 @@ export default function CoursesRecommendationsPage() {
         }
       } catch (error) {
         console.error("Failed to fetch courses", error);
+      } finally{
+        setLoading(false)
       }
     };
 
     fetchCourses();
   }, []);
 
-  // Course recommendations based on parameters
-  // const courseRecommendations = [
-  //   {
-  //     title: "Diploma in Digital Marketing",
-  //     institution: "Digital Academy India",
-  //     location: "Mumbai, Online",
-  //     duration: "6 months",
-  //     price: 45000,
-  //     type: "diploma",
-  //     timeline: "short",
-  //   },
-  //   {
-  //     title: "Full Stack Web Development",
-  //     institution: "Coding Ninjas",
-  //     location: "Delhi, Online",
-  //     duration: "8 months",
-  //     price: 85000,
-  //     type: "certification",
-  //     timeline: "short",
-  //   },
-  //   {
-  //     title: "Bachelor of Computer Applications (BCA)",
-  //     institution: "IGNOU",
-  //     location: "Pan India",
-  //     duration: "3 years",
-  //     price: 120000,
-  //     type: "degree",
-  //     timeline: "long",
-  //   },
-  //   {
-  //     title: "Diploma in Hotel Management",
-  //     institution: "IHM",
-  //     location: "Mumbai, Delhi, Bangalore",
-  //     duration: "1 year",
-  //     price: 75000,
-  //     type: "diploma",
-  //     timeline: "short",
-  //   },
-  //   {
-  //     title: "Bachelor of Business Administration",
-  //     institution: "Symbiosis University",
-  //     location: "Pune, Online",
-  //     duration: "3 years",
-  //     price: 350000,
-  //     type: "degree",
-  //     timeline: "long",
-  //   },
-  //   {
-  //     title: "Data Science Certification",
-  //     institution: "Udemy",
-  //     location: "Online",
-  //     duration: "4 months",
-  //     price: 25000,
-  //     type: "certification",
-  //     timeline: "short",
-  //   },
-  //   {
-  //     title: "Graphic Design Course",
-  //     institution: "Arena Animation",
-  //     location: "Pan India",
-  //     duration: "6 months",
-  //     price: 60000,
-  //     type: "certification",
-  //     timeline: "short",
-  //   },
-  //   {
-  //     title: "Bachelor of Science in IT",
-  //     institution: "Mumbai University",
-  //     location: "Mumbai",
-  //     duration: "3 years",
-  //     price: 180000,
-  //     type: "degree",
-  //     timeline: "long",
-  //   },
-  // ]
 
   // Filter courses based on parameters
   const filteredCourses = courses.filter((course) => {
@@ -229,7 +159,11 @@ export default function CoursesRecommendationsPage() {
               </div>
             </div>
 
-            {filteredCourses.length > 0 ? (
+            {loading ? (
+                  <div className="flex justify-center items-center">
+                    <Loader2 className="animate-spin h-8 w-8 text-primary" />
+                  </div>
+                ) : (filteredCourses.length > 0) ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredCourses.map((course, index) => (
                   <Card key={index} className="bg-background">
