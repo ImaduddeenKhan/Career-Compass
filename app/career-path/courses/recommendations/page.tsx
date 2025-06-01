@@ -96,7 +96,7 @@ export default function CoursesRecommendationsPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 p-4 md:p-8">
+      <main className="flex-1 p-4 md:p-8 mt-24">
         <div className="max-w-6xl mx-auto">
           <div className="space-y-8">
             <div>

@@ -46,7 +46,7 @@ export default function CoursesQuestionsPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main className="flex-1 flex items-center justify-center p-4 mt-24">
         <div className="max-w-md w-full mx-auto">
           <div className="space-y-8">
             <div className="space-y-2 text-center">
