@@ -4,7 +4,8 @@ import { ArrowRight, BookOpen, Briefcase, CheckCircle, Users, TrendingUp, Award 
 import { Button } from "@/components/ui/button"
 
 export function Landing(){
-    return <main className="flex-1">
+    return <>
+    <main className="flex-1">
         <section className="w-full py-6 bg-background">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -97,7 +98,7 @@ export function Landing(){
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto grid max-w-7xl items-center gap-3 py-12 lg:grid-cols-3 lg:gap-5">
               <div className="flex flex-col justify-center space-y-4 rounded-2xl bg-background p-6 shadow-lg border-2">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Briefcase className="h-6 w-6" />
@@ -150,6 +151,34 @@ export function Landing(){
                   </li>
                 </ul>
               </div>
+
+              <div className="flex flex-col justify-center space-y-4 rounded-2xl bg-background p-6 shadow-lg border-2">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <Briefcase className="h-6 w-6" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold">AI Career Test</h3>
+                  <p className="text-muted-foreground">
+                    Take an AI-powered assessment that analyzes your skills, interests, and goals to recommend the most suitable career paths for you.
+                  </p>
+                </div>
+                <ul className="grid gap-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>Personalized career path suggestions</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>AI-based skill and interest matching</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>Clear roadmap for career growth</span>
+                  </li>
+                </ul>
+              </div>
+
+
             </div>
           </div>
         </section>
@@ -337,4 +366,6 @@ export function Landing(){
           </div>
         </section>
       </main>
+    </>
+  
 }
