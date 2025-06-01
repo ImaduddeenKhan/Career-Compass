@@ -9,7 +9,7 @@ export function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <header className="border-b">
+    <header className="border-b fixed top-0 w-full z-50 bg-background">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center">
