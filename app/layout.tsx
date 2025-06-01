@@ -8,11 +8,11 @@ import { SessionProvider } from "next-auth/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
-// export const metadata: Metadata = {
-//   title: "Career Guidance Platform",
-//   description: "Find your perfect career path with personalized guidance",
-//     generator: 'v0.dev'
-// }
+export function Metadata()  {
+  title: "Career Guidance Platform"
+  description: "Find your perfect career path with personalized guidance"
+    generator: 'Team Career Compass'
+}
 
 export default function RootLayout({
   children,
