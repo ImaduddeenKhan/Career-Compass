@@ -1,27 +1,34 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { Book, GraduationCap, Wrench, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Navbar } from "@/components/Navbar"
-import { Footer } from "@/components/Footer"
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Book, GraduationCap, Wrench, ArrowRight, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export default function WorkEducationLevelPage() {
-  const router = useRouter()
-  const [selectedLevel, setSelectedLevel] = useState<string | null>(null)
+  const router = useRouter();
+  const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
 
   const handleLevelSelect = (level: string) => {
-    setSelectedLevel(level)
+    setSelectedLevel(level);
 
     // Navigate to the recommendations page with the selected level
     setTimeout(() => {
-      router.push(`/career-path/work/recommendations?level=${level}`)
-    }, 300)
-  }
+      router.push(`/career-path/work/recommendations?level=${level}`);
+    }, 300);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -30,14 +37,28 @@ export default function WorkEducationLevelPage() {
       <main className="flex-1 flex items-center justify-center p-4 mt-24">
         <div className="max-w-5xl w-full mx-auto">
           <div className="space-y-8">
+            <Link
+                href="/career-path"
+                className="text-primary hover:underline inline-flex items-center"
+              >
+                <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
+                Back
+              </Link>
             <div className="space-y-2 text-center">
-              <h1 className="text-3xl font-bold">Select Your Education Level</h1>
-              <p className="text-muted-foreground">Choose your highest completed education level</p>
+              <h1 className="text-3xl font-bold">
+                Select Your Education Level
+              </h1>
+              <p className="text-muted-foreground">
+                Choose your highest completed education level
+              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
+              
               <Card
-                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${selectedLevel === "10th" ? "ring-2 ring-primary" : ""}`}
+                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${
+                  selectedLevel === "10th" ? "ring-2 ring-primary" : ""
+                }`}
                 onClick={() => handleLevelSelect("10th")}
               >
                 <CardHeader className="text-center">
@@ -49,7 +70,8 @@ export default function WorkEducationLevelPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-center">
-                    Jobs and opportunities available for those who have completed 10th standard education.
+                    Jobs and opportunities available for those who have
+                    completed 10th standard education.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-center">
@@ -61,7 +83,9 @@ export default function WorkEducationLevelPage() {
               </Card>
 
               <Card
-                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${selectedLevel === "12th" ? "ring-2 ring-primary" : ""}`}
+                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${
+                  selectedLevel === "12th" ? "ring-2 ring-primary" : ""
+                }`}
                 onClick={() => handleLevelSelect("12th")}
               >
                 <CardHeader className="text-center">
@@ -73,7 +97,8 @@ export default function WorkEducationLevelPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-center">
-                    Jobs and opportunities available for those who have completed 12th standard education.
+                    Jobs and opportunities available for those who have
+                    completed 12th standard education.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-center">
@@ -85,19 +110,26 @@ export default function WorkEducationLevelPage() {
               </Card>
 
               <Card
-                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${selectedLevel === "unskilled" ? "ring-2 ring-primary" : ""}`}
+                className={`cursor-pointer transition-all bg-background hover:shadow-lg ${
+                  selectedLevel === "unskilled" ? "ring-2 ring-primary" : ""
+                }`}
                 onClick={() => handleLevelSelect("unskilled")}
               >
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800">
                     <Wrench className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle className="text-xl mt-4">Unskilled Worker</CardTitle>
-                  <CardDescription>No formal education required</CardDescription>
+                  <CardTitle className="text-xl mt-4">
+                    Unskilled Worker
+                  </CardTitle>
+                  <CardDescription>
+                    No formal education required
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-center">
-                    Jobs and opportunities available for those without formal education but willing to learn.
+                    Jobs and opportunities available for those without formal
+                    education but willing to learn.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-center">
@@ -114,6 +146,5 @@ export default function WorkEducationLevelPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-

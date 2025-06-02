@@ -20,7 +20,7 @@ export function Navbar() {
             height={40}
             className="mr-2"
           />
-          <Link href="/" className="text-2xl font-bold text-primary">Career Guidance</Link>
+          <Link href="/" className="text-2xl font-bold text-primary">Career Compass</Link>
         </div>
 
         {/* Right Side */}

@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { ArrowRight, MapPin, Clock, DollarSign } from "lucide-react"
+import { ArrowRight, MapPin, Clock, DollarSign, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
@@ -47,8 +47,18 @@ export default function CoursesQuestionsPage() {
       <Navbar />
 
       <main className="flex-1 flex items-center justify-center p-4 mt-24">
+        
         <div className="max-w-md w-full mx-auto">
+          
+          
           <div className="space-y-8">
+            <Link
+              href="/career-path"
+              className="text-primary hover:underline inline-flex items-center md:absolute md:left-40 md:top-24"
+            >
+              <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
+              Back
+            </Link>
             <div className="space-y-2 text-center">
               <h1 className="text-3xl font-bold">Tell Us About Your Preferences</h1>
               <p className="text-muted-foreground">Help us find the best courses for you</p>

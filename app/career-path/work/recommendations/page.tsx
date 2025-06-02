@@ -113,7 +113,7 @@ export default function WorkRecommendationsPage() {
 
             <Tabs defaultValue="jobs" className="w-full" onValueChange={setActiveTab}>
               <TabsList className="grid w-full grid-cols-2 mb-8">
-                <TabsTrigger value="jobs">Available Jobs</TabsTrigger>
+                <TabsTrigger value="jobs">Suitable Job Role</TabsTrigger>
                 <TabsTrigger value="skills">Upgrade Skills</TabsTrigger>
               </TabsList>
 
