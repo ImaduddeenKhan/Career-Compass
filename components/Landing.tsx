@@ -71,21 +71,21 @@ export function Landing() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Users className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold">10,000+</h3>
+                <h3 className="text-xl font-bold">50+</h3>
                 <p className="text-sm text-muted-foreground">Happy Users</p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Briefcase className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold">500+</h3>
+                <h3 className="text-xl font-bold">100+</h3>
                 <p className="text-sm text-muted-foreground">Career Paths</p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <BookOpen className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold">1,000+</h3>
+                <h3 className="text-xl font-bold">100+</h3>
                 <p className="text-sm text-muted-foreground">Courses</p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
