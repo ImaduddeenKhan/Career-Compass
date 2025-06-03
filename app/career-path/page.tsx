@@ -34,7 +34,7 @@ export default function CareerPathPage() {
         <div className="max-w-4xl w-full mx-auto">
           <div className="space-y-8">
             <Link
-              href="/career-path"
+              href="/"
               className="text-primary hover:underline inline-flex items-center"
             >
               <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
