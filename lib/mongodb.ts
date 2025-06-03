@@ -10,7 +10,7 @@ let isConnected = false; // Prevent multiple connections
 
 export const connectToDatabase = async () => {
   if (isConnected) {
-    console.log("✅ Already connected to MongoDB");
+    console.log("Already connected to MongoDB");
     return;
   }
 

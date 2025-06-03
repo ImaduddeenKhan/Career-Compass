@@ -3,7 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Book, GraduationCap, Wrench, ArrowRight, ChevronRight } from "lucide-react";
+import {
+  Book,
+  GraduationCap,
+  Wrench,
+  ArrowRight,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -36,14 +42,14 @@ export default function WorkEducationLevelPage() {
 
       <main className="flex-1 flex items-center justify-center p-4 mt-24">
         <div className="max-w-5xl w-full mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-8 ">
             <Link
-                href="/career-path"
-                className="text-primary hover:underline inline-flex items-center"
-              >
-                <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
-                Back
-              </Link>
+              href="/career-path"
+              className="text-primary hover:underline inline-flex items-center"
+            >
+              <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
+              Back
+            </Link>
             <div className="space-y-2 text-center">
               <h1 className="text-3xl font-bold">
                 Select Your Education Level
@@ -54,7 +60,6 @@ export default function WorkEducationLevelPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              
               <Card
                 className={`cursor-pointer transition-all bg-background hover:shadow-lg ${
                   selectedLevel === "10th" ? "ring-2 ring-primary" : ""

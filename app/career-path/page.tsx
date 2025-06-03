@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Briefcase, GraduationCap, ArrowRight } from "lucide-react"
+import { Briefcase, GraduationCap, ArrowRight, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navbar } from "@/components/Navbar"
@@ -33,6 +33,13 @@ export default function CareerPathPage() {
       <main className="flex-1 flex items-center justify-center p-4 mt-24">
         <div className="max-w-4xl w-full mx-auto">
           <div className="space-y-8">
+            <Link
+              href="/career-path"
+              className="text-primary hover:underline inline-flex items-center"
+            >
+              <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
+              Back
+            </Link>
             <div className="space-y-2 text-center">
               <h1 className="text-3xl font-bold">Choose Your Career Path</h1>
               <p className="text-muted-foreground">Select the option that best fits your current goals</p>
