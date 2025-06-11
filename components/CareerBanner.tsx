@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function CareerBanner() {
   return (
-    <Link href={"/careertest"}>
+    <Link href={"/ai-test"}>
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
