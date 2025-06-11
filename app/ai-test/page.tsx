@@ -160,7 +160,7 @@ export default function CareerTestChat ({ onBack }: CareerTestChatProps) {
     <div className="min-h-screen bg-background  flex flex-col">
       {/* Header */}
       <div className=" bg-background backdrop-blur-sm border-b border-gray-200 p-4 sticky top-0 z-10">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto flex flex-wrap gap-2 justify-between items-center px-4 sm:px-6 md:px-8">
          
           <Link
               href="/"
@@ -170,7 +170,7 @@ export default function CareerTestChat ({ onBack }: CareerTestChatProps) {
               Back to Home
             </Link>
           <h1 className="text-xl font-semibold">Career Compass AI Test</h1>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <Button
               variant={questionMode === 'mcq' ? 'default' : 'outline'}
               size="sm"
@@ -203,8 +203,8 @@ export default function CareerTestChat ({ onBack }: CareerTestChatProps) {
       </div>
 
       {/* Chat Container */}
-      <div className="flex-1 container mx-auto p-4 max-w-4xl">
-        <Card className="h-full flex flex-col bg-background/95 backdrop-blur-sm shadow-xl">
+      <div className="flex-1 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto w-full">
+        <Card className="h-full flex flex-col bg-background/95 backdrop-blur-sm shadow-xl w-full">
           {/* Messages */}
           <div className="flex-1 p-6 overflow-y-auto space-y-4">
             <AnimatePresence>
